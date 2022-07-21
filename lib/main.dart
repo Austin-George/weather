@@ -1,10 +1,11 @@
-import '../flutter_flow/flutter_flow_theme.dart';
-import '../flutter_flow/flutter_flow_util.dart';
-import '../flutter_flow/flutter_flow_widgets.dart';
-import '../settings/settings_widget.dart';
+import 'package:url_launcher/url_launcher.dart';
+
+import 'settings.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:page_transition/page_transition.dart';
+import 'package:flutter/widgets.dart';
 
 class HomeWidget extends StatefulWidget {
   const HomeWidget({Key? key}) : super(key: key);
@@ -66,7 +67,7 @@ class _HomeWidgetState extends State<HomeWidget> {
           elevation: 2,
         ),
       ),
-      backgroundColor: FlutterFlowTheme.of(context).primaryBackground,
+      backgroundColor: Colors.white,
       body: SafeArea(
         child: GestureDetector(
           onTap: () => FocusScope.of(context).unfocus(),
@@ -85,26 +86,14 @@ class _HomeWidgetState extends State<HomeWidget> {
                   children: [
                     Padding(
                       padding: EdgeInsetsDirectional.fromSTEB(5, 0, 0, 0),
-                      child: FFButtonWidget(
-                        onPressed: () {
-                          print('Button pressed ...');
-                        },
-                        text: '🔎',
-                        options: FFButtonOptions(
-                          width: 46,
-                          height: 46,
-                          color: Colors.white,
-                          textStyle: TextStyle(
-                            fontFamily: 'Poppins',
-                            color: Colors.white,
+                      child: TextButton(
+                          child: Text(
+                            "S",
+                            style: TextStyle(fontSize: 10),
                           ),
-                          borderSide: BorderSide(
-                            color: Colors.transparent,
-                            width: 1,
-                          ),
-                          borderRadius: BorderRadius.circular(8),
-                        ),
-                      ),
+                          onPressed: () async {
+                            int n = 0;
+                          }),
                     ),
                     Padding(
                       padding: EdgeInsetsDirectional.fromSTEB(0, 5, 0, 5),

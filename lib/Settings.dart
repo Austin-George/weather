@@ -1,5 +1,3 @@
-import '../flutter_flow/flutter_flow_theme.dart';
-import '../flutter_flow/flutter_flow_util.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -33,7 +31,7 @@ class _SettingsWidgetState extends State<SettingsWidget> {
         centerTitle: false,
         elevation: 2,
       ),
-      backgroundColor: FlutterFlowTheme.of(context).primaryBackground,
+      backgroundColor: Colors.white,
       body: SafeArea(
         child: GestureDetector(
           onTap: () => FocusScope.of(context).unfocus(),
@@ -48,11 +46,17 @@ class _SettingsWidgetState extends State<SettingsWidget> {
                       setState(() => switchListTileValue1 = newValue),
                   title: Text(
                     'Location',
-                    style: FlutterFlowTheme.of(context).title3,
+                    style: TextStyle(
+                        fontFamily: 'Poppins',
+                        color: Colors.black,
+                        fontSize: 20),
                   ),
                   subtitle: Text(
                     'On',
-                    style: FlutterFlowTheme.of(context).subtitle2,
+                    style: TextStyle(
+                        fontFamily: 'Poppins',
+                        color: Colors.grey,
+                        fontSize: 12),
                   ),
                   tileColor: Color(0xFFF5F5F5),
                   dense: false,
@@ -67,11 +71,17 @@ class _SettingsWidgetState extends State<SettingsWidget> {
                       setState(() => switchListTileValue2 = newValue),
                   title: Text(
                     'Notification',
-                    style: FlutterFlowTheme.of(context).title3,
+                    style: TextStyle(
+                        fontFamily: 'Poppins',
+                        color: Colors.black,
+                        fontSize: 20),
                   ),
                   subtitle: Text(
                     'On',
-                    style: FlutterFlowTheme.of(context).subtitle2,
+                    style: TextStyle(
+                        fontFamily: 'Poppins',
+                        color: Colors.grey,
+                        fontSize: 12),
                   ),
                   tileColor: Color(0xFFF5F5F5),
                   dense: false,
