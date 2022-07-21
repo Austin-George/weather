@@ -7,14 +7,18 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:page_transition/page_transition.dart';
 import 'package:flutter/widgets.dart';
 
-class HomeWidget extends StatefulWidget {
-  const HomeWidget({Key? key}) : super(key: key);
+void main() {
+  runApp(const Home());
+}
+
+class Home extends StatefulWidget {
+  const Home({Key? key}) : super(key: key);
 
   @override
   _HomeWidgetState createState() => _HomeWidgetState();
 }
 
-class _HomeWidgetState extends State<HomeWidget> {
+class _HomeWidgetState extends State<Home> {
   TextEditingController? textController;
   final scaffoldKey = GlobalKey<ScaffoldState>();
 
@@ -29,11 +33,11 @@ class _HomeWidgetState extends State<HomeWidget> {
     return Scaffold(
       key: scaffoldKey,
       appBar: PreferredSize(
-        preferredSize: Size.fromHeight(50),
+        preferredSize: const Size.fromHeight(50),
         child: AppBar(
-          backgroundColor: Color(0xFF185E00),
+          backgroundColor: const Color(0xFF185E00),
           automaticallyImplyLeading: false,
-          flexibleSpace: Align(
+          flexibleSpace: const Align(
             alignment: AlignmentDirectional(0, 0.75),
             child: Text(
               'Sample1',
@@ -51,9 +55,9 @@ class _HomeWidgetState extends State<HomeWidget> {
                   context,
                   PageTransition(
                     type: PageTransitionType.rightToLeft,
-                    duration: Duration(milliseconds: 300),
-                    reverseDuration: Duration(milliseconds: 300),
-                    child: SettingsWidget(),
+                    duration: const Duration(milliseconds: 300),
+                    reverseDuration: const Duration(milliseconds: 300),
+                    child: const SettingsWidget(),
                   ),
                 );
               },
